@@ -19,7 +19,7 @@ class CakeContainer extends Component {
 
   	render() {
     	return (
-      	<CakeList/>
+      	<CakeList cakeData={this.state.cakeData}/>
     	);
   	}
 }
