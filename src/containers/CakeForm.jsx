@@ -19,14 +19,13 @@ class CakeForm extends Component {
 
 	changeFormState(e){
 		this.setState({[e.target.name]: e.target.value})
-		console.log(e.target.value, e.target.name)
 	}
 
 	handleSubmit(event) {
 	    event.preventDefault();
 	    const ajaxRequest = new AjaxRequest("http://ec2-52-209-201-89.eu-west-1.compute.amazonaws.com:5000/api/cakes")
 	    ajaxRequest.post(this.state)
-	    // this.setState({redirect: true})
+	    this.setState({redirect: true})
 	  }
 
   	render() {
