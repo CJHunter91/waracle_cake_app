@@ -5,7 +5,7 @@ class CakeForm extends Component {
 
   	render() {
     	return (
-      	<p>Test Cake Form</p>
+      	<CakeInput/>
     	);
   	}
 }
