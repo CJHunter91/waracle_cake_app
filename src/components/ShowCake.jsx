@@ -16,7 +16,6 @@ class ShowCake extends Component {
 	}
 
   	render() {
-  		console.log(this.state)
     	return (
     		<article id="show-cake">
     			<img alt="A tasty cake" className="image" src={this.state.cakeData.imageUrl}/>

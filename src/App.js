@@ -11,6 +11,9 @@ class App extends Component {
     	<Router>
 
     	<section id="app">
+    	<header>
+    	<h3 id="title">Cake Book</h3>
+    	</header>
     	<nav>
     		<Link to={'/'}>
     		<li>Home</li>
@@ -21,8 +24,9 @@ class App extends Component {
     	</nav>
     	<article id="main-view">
      		<Route exact={true} path='/' component={CakeContainer}/>
-     		<Route path='/new' component={CakeForm}/>
-   			<Route exact={true} path='/:cakeID' component={ShowCake}/>
+     		<Route exact={true} path='/:cakeID' component={ShowCake}/>
+     		<Route exact={true} path='/new' component={CakeForm}/>
+   			
     	</article>
     	</section>
     	</Router>

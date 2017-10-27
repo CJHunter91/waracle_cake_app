@@ -1,4 +1,77 @@
+
 img{
 	width: 100px;
 	height: 100px;
+}
+html, body{
+  padding: 0px;
+  margin: 0px;
+  background-color: #DFDFDF;
+}
+
+nav{
+	background: linear-gradient(to right, #7d9b89 29%, #939c53 100%);
+	display: inline-flex;
+	width: 100%;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+nav li{
+	padding: 5px;
+	margin: 0px 20px;
+	border-radius: 5px;
+	background-color: #94c058; 
+}
+
+li:hover{
+	background: #DFDFDF;
+}
+
+li{
+  list-style: none;
+}
+
+a, h1, h2, h3, h4, h5, p, li{
+  color: #363636;
+  text-decoration: none;
+}
+
+
+#title{
+  background: linear-gradient(to right, #7d9b89 29%, #939c53 100%);
+  margin: 0px;
+  padding: 20px;
+  font-size: 3.0vh;
+}
+
+#show-cake{
+	flex-direction: column;
+	align-items: center;
+}
+
+
+
+.cake, #show-cake{
+	display: flex;
+	justify-content: space-around;
+  font-size: 2.1vh;
+  padding: 0px 0px 0px 5px;
+  width: 600px;
+  margin: 0 auto;
+  border-bottom: solid 10px #7d9b89;
+  font-size: large;
+  padding: 8px;
+  width: 600px;
+}
+
+@media screen and (max-width: 600px){
+
+  .cake{
+    width: 100%;
+  }
+  nav{
+  	justify-content: space-around;
+  }
+
 }

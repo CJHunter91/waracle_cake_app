@@ -11,11 +11,9 @@ class AjaxRequest{
 			if(xhr.status === 200){
 				this.data = xhr.responseText;
 				const jsonData = JSON.parse(xhr.responseText);
-				console.log(jsonData)
 				callback(jsonData);
 			}
 		}
-
 		xhr.send();
 	}
 
