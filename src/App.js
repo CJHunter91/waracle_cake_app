@@ -11,12 +11,15 @@ class App extends Component {
 
     	<section id="app">
     	<nav>
+    		<Link to={'/'}>
+    		<li>Home</li>
+    		</Link>
     		<Link to={'/new'}>
     		<li>Add Cake</li>
     		</Link>
     	</nav>
     	<article id="main-view">
-     		<CakeContainer/>
+     		<Route exact={true} path='/' component={CakeContainer}/>
      		<Route path='/new' component={CakeForm}/>
     	</article>
     	</section>
