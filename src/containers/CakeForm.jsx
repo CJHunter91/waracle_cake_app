@@ -7,10 +7,10 @@ class CakeForm extends Component {
 	constructor(props){
 		super(props);
 		this.state ={
-			name: null,
-			imageUrl: null,
-			comment: null,
-			yumFactor: null,
+			name: "",
+			imageUrl: "",
+			comment: "",
+			yumFactor: 1,
 			redirect: false
 		}
 		this.changeFormState = this.changeFormState.bind(this);
@@ -26,7 +26,7 @@ class CakeForm extends Component {
 	    event.preventDefault();
 	    const ajaxRequest = new AjaxRequest("http://ec2-52-209-201-89.eu-west-1.compute.amazonaws.com:5000/api/cakes")
 	    ajaxRequest.post(this.state)
-	    this.setState({redirect: true})
+	    // this.setState({redirect: true})
 	  }
 
   	render() {
