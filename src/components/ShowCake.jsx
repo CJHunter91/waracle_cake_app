@@ -5,7 +5,6 @@ const ShowCake = (props) => {
 
 	return(
 		<section id="cake-show">
-			{showCake}
 		</section>
 		)
 }

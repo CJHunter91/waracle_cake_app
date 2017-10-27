@@ -8,8 +8,18 @@ class CakeContainer extends Component {
 		this.setState({ cakeData:data })
 	}
 
+	setShowData(data){
+		this.setState({ showData:data })
+	}
+
 	componentWillMount(){
 		this.setState({ cakeData:[] })
+	}
+
+	getCakeData(id){
+		const ajaxRequest = new AjaxRequest("http://ec2-52-209-201-89.eu-west-1.compute.amazonaws.com:5000/api/cakes/" + id)
+		ajaxRequest.get(this.setShowData.bind(this))
+
 	}
 
 	componentDidMount(){
@@ -19,7 +29,7 @@ class CakeContainer extends Component {
 
   	render() {
     	return (
-      	<CakeList cakeData={this.state.cakeData}/>
+      	<CakeList getCakeData={this.getCakeData.bind(this)} cakeData={this.state.cakeData}/>
     	);
   	}
 }
