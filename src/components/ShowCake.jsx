@@ -1,11 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
+import AjaxRequest from '../services/AjaxRequest'
 
-const ShowCake = (props) => {
-	
+class ShowCake extends Component {
 
-	return(
-		<section id="cake-show">
-		</section>
-		)
+
+	setCakeData(data){
+		this.setState({ cakeData:data })
+	}
+	componentWillMount(){
+		this.setState({ cakeData:[] })
+	}
+	componentDidMount(){
+		const ajaxRequest = new AjaxRequest("http://ec2-52-209-201-89.eu-west-1.compute.amazonaws.com:5000/api/cakes/" + this.props.match.params.cakeID)
+		ajaxRequest.get(this.setCakeData.bind(this))
+	}
+
+  	render() {
+  		console.log(this.state)
+    	return (
+    		<article id="show-cake">
+    			<img alt="A tasty cake" className="image" src={this.state.cakeData.imageUrl}/>
+				<h4>{this.state.cakeData.name} Rated: {this.state.cakeData.yumFactor}</h4>
+				<label>Comment:</label>
+				<p>{this.state.cakeData.comment}</p>
+    		</article>
+    	);
+  	}
 }
+
 export default ShowCake;

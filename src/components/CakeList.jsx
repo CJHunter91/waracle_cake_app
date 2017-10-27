@@ -1,13 +1,16 @@
 import React from 'react';
+import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
 
 const CakeList = (props) => {
 
 	const cakeList = props.cakeData.map((cake, index) => {
 		return(
-			<article onClick={()=>{props.getCakeData(cake.id)}} className="cake" key={index}>
+			<Link key={index} to={`/${cake.id}`}>
+			<article className="cake" >
 				<img alt="A tasty cake" className="image" src={cake.imageUrl}/>
 				<h4>{cake.name}</h4>
 			</article>
+			</Link>
 			)
 	})
 	
