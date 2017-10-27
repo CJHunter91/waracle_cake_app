@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CakeContainer from './containers/CakeContainer';
 import CakeForm from './containers/CakeForm';
 import ShowCake from './components/ShowCake';
-import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
@@ -23,10 +23,11 @@ class App extends Component {
     		</Link>
     	</nav>
     	<article id="main-view">
+    	<Switch>
      		<Route exact={true} path='/' component={CakeContainer}/>
-     		<Route exact={true} path='/:cakeID' component={ShowCake}/>
      		<Route exact={true} path='/new' component={CakeForm}/>
-   			
+     		<Route exact={true} path='/:cakeID' component={ShowCake}/>
+   		</Switch>
     	</article>
     	</section>
     	</Router>
