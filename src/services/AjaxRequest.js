@@ -17,6 +17,21 @@ class AjaxRequest{
 
 		xhr.send();
 	}
+
+	post(params){
+		const xhr = new XMLHttpRequest();
+		xhr.open('POST', this.url);
+		xhr.onload = () =>{
+			if(xhr.status === 200){
+				this.data = xhr.responseText;
+				const jsonData = JSON.parse(xhr.responseText);
+			}
+		}
+		
+		xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+		xhr.send(params)
+	}
 }
 
 export default AjaxRequest
