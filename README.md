@@ -5,7 +5,7 @@ Tech Stack:
   * JS
   * React
 
-This app allows a user to view cakes, select a cake and create a new cake.
+This app allows a user to view cakes, select a cake and create a new cake. It communicates with a AWS backend to retrieve cake information and post new cakes.
 
 Author: Christopher Hunter
 
