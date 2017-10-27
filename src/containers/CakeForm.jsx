@@ -40,8 +40,12 @@ class CakeForm extends Component {
 		<form id="cake-form"  onSubmit={this.handleSubmit}>
 			<label>Name:</label>
 			<input type="text" name="name" onChange={this.changeFormState}/>
+			<br/>
+			<br/>
 			<label>Image Url:</label>
 			<input type="text" name="imageUrl" onChange={this.changeFormState}/>
+			<br/>
+			<br/>
 			<label>Yum Factor</label>
 			<select name="yumFactor" onChange={this.changeFormState}>
 				{array.map((number) =>{
@@ -50,10 +54,15 @@ class CakeForm extends Component {
 						)
 				})}
 			</select>
-			<input type="submit" value="Add Cake" />
+			<br/>
+			<br/>
+			
 		</form>
 			<textarea name="comment" form="cake-form" placeholder="Enter comment here..." onChange={this.changeFormState}>
 			</textarea>
+			<br/>
+			<br/>
+			<input type="submit" value="Add Cake" form="cake-form" />
 		</section>
 		)
   	}
