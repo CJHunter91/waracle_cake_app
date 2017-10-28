@@ -48,6 +48,7 @@ a, h1, h2, h3, h4, h5, p, li{
 #show-cake{
 	flex-direction: column;
 	align-items: center;
+  width: 600px;
 }
 
 #cake-input{
@@ -58,18 +59,18 @@ a, h1, h2, h3, h4, h5, p, li{
 	display: flex;
 	justify-content: space-around;
   font-size: 2.1vh;
-  padding: 0px 0px 0px 5px;
+  padding: 0px 0px 0px 0px;
   width: 600px;
   margin: 0 auto;
   border-bottom: solid 10px #7d9b89;
   font-size: large;
-  padding: 8px;
+  padding: 8px 0px;
   width: 600px;
 }
 
 @media screen and (max-width: 600px){
 
-  .cake{
+  .cake, #show-cake{
     width: 100%;
   }
   nav{
